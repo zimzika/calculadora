@@ -17,7 +17,7 @@ const App = () => {
         if (isOperator(value) && display.length <= 0) return;
         if (isOperator(value) && display.match(/([0-9]?(\+|\*|\+|\-)[0-9])/g)) {
             let result = eval(display);
-            return setDisplay(result.concat(value));
+            return setDisplay(result.toString().concat(value));
         }
         if (isOperator(value) && !isNumber(lastChar)) return;
         
